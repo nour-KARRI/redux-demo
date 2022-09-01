@@ -1,19 +1,19 @@
-import { BUY_ICECREAM } from './iceCreamType'
+import { BUY_ICECREAM } from "./iceCreamType";
 
 const initialState = {
-    numOfIceCream: 20
-}
+  numOfIceCream: 20,
+};
 
 const iceCreamReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case BUY_ICECREAM:
-            return {
-                ...state,
-                numOfIceCream: state.numOfIceCream - 1
-            }
+  switch (action.type) {
+    case BUY_ICECREAM:
+      return {
+        ...state,
+        numOfIceCream: state.numOfIceCream - 1,
+      };
 
-        default:
-            break;
-    }
-}
-export default iceCreamReducer
+    default:
+      return state;
+  }
+};
+export default iceCreamReducer;
